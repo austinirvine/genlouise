@@ -16,8 +16,6 @@ import {
 } from '@material-ui/icons';
 import styles from './styles';
 import TRI from '../../../../1.png';
-import TR from '../Sidebar/icons/TR_flag.png';
-import EN from '../Sidebar/icons/US_flag.png';
 
 class Sidebar extends Component {
 

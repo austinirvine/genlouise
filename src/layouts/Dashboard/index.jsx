@@ -24,7 +24,7 @@ class Dashboard extends Component {
     const isMobile = ['xs', 'sm', 'md'].includes(props.width);
 
     this.state = {
-      isOpen: !isMobile
+      isOpen: false
     };
   }
 

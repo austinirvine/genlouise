@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import compose from 'recompose/compose';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core';
-import {IconButton, Toolbar, Typography,} from '@material-ui/core';
+import { IconButton, Toolbar, Typography, Box } from '@material-ui/core';
 
 import {
   Menu as MenuIcon,
@@ -57,25 +57,6 @@ class Topbar extends Component {
     this.signal = false;
   }
 
-  /*handleSignOut = () => {
-    const { history } = this.props;
-
-    localStorage.setItem('isAuthenticated', false);
-    history.push('/sign-in');
-  };
-
-  handleShowNotifications = event => {
-    this.setState({
-      notificationsEl: event.currentTarget
-    });
-  };
-
-  handleCloseNotifications = () => {
-    this.setState({
-      notificationsEl: null
-    });
-  };*/
-
   render() {
 
     const {
@@ -99,12 +80,17 @@ class Topbar extends Component {
             >
               {isSidebarOpen ? <CloseIcon /> : <MenuIcon />}
             </IconButton>
-            <Typography
-              className={classes.title}
-              variant="h4"
-            >
-              {title}
-            </Typography>
+            <Box display="flex" justifyContent="center" m={1} p={1}>
+              <Box p={1} >
+                <Typography
+                  className={classes.title}
+                  variant="h4"
+                >
+                  {title}
+                </Typography>
+              </Box>
+            </Box>
+            
 
           </Toolbar>
         </div>

@@ -1,6 +1,6 @@
 export default theme => ({
   root: {
-    padding: theme.spacing.unit * 3
+    // padding: theme.spacing.unit * 3
   },
   picture: {
     align: 'center',
@@ -8,7 +8,6 @@ export default theme => ({
     display: 'flex',
     height: 'fill',
     justifyContent: 'center',
-    // // marginLeft: 'auto',
     width: 'fill'
   },
 });
