@@ -94,6 +94,9 @@ public
 # FuseBox cache
 .fusebox/
 
+# production
+/build
+
 # DynamoDB Local files
 .dynamodb/
 
