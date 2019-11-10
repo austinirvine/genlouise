@@ -80,18 +80,16 @@ class Topbar extends Component {
             >
               {isSidebarOpen ? <CloseIcon /> : <MenuIcon />}
             </IconButton>
-            <Box display="flex" justifyContent="center" m={1} p={1}>
-              <Box p={1} >
+            <Box display="flex" justifyContent="center">
+              <Box>
                 <Typography
                   className={classes.title}
-                  variant="h4"
+                  variant="h2"
                 >
                   {title}
                 </Typography>
               </Box>
             </Box>
-            
-
           </Toolbar>
         </div>
       </Fragment>

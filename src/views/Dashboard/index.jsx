@@ -10,6 +10,7 @@ const styles = theme => ({
   root: {
     justifyContent: 'space-around',
     zIndex: '200',
+    marginTop: '30px',
   },
   gridList: {
     width: '100%',
@@ -40,28 +41,51 @@ class Dashboard extends Component {
     const { currentImage, viewerIsOpen } = this.state;
     var imageArray = [];
     images.forEach(function( img ) { imageArray.push({"src":require(img.src+""),"width":img.width,"height":img.height}) });
-    document.addEventListener('contextmenu', event => event.preventDefault());
+    // document.addEventListener('contextmenu', event => event.preventDefault());
     return (
-      <DashboardLayout title="genlouise.art">
-          <Box class={classes.root}>
-            <Gallery photos={imageArray} direction='column' columns={3} onClick={this.openLightbox}/>
-              <ModalGateway>
+      <>
+        <DashboardLayout title="genlouise.art">
+            <Box class={classes.root}>
+              <Gallery photos={imageArray} onClick={this.openLightbox}/>
+                <ModalGateway>
                 {viewerIsOpen ? (
-                  <Modal 
+                  <Modal
                     onClose={this.closeLightbox}
-                    toggleFullScreen={true} 
-                    allowFullScreen={true}
                     styles={{
-                      blanket: base => ({
-                        ...base,
-                        backgroundColor: 'rgba(40,60,20,0.85)',
-                      }),
                       dialog: base => ({
                         ...base,
                         maxWidth: 640,
                       }),
                     }}>
                     <Carousel
+                      styles={{
+                        header: (base, state) => ({
+                          ...base,
+                          color: 'black',
+                          minHeight: 42,
+                          paddingTop: 90,
+                          zIndex: 2,
+          
+                          '& a': {
+                            color: state.interactionIsIdle ? 'black' : '#00d7ff',
+                            transition: 'color 300ms',
+                          },
+                          '& strong': { textTransform: 'uppercase' },
+                        }),
+                        navigationItem: base => ({
+                          ...base,
+                          backgroundColor: 'transparent',
+          
+                          ':hover': {
+                            backgroundColor: '#00d7ff',
+                          },
+                          ':active': {
+                            backgroundColor: '#00d7ff',
+                            transform: 'translateY(2px)',
+                          },
+                        }),
+                      }}
+                      class={classes.root}
                       currentIndex={currentImage}
                       views={imageArray.map(x => ({
                         ...x,
@@ -72,9 +96,9 @@ class Dashboard extends Component {
                   </Modal>
                 ) : null }
               </ModalGateway>
-          </Box>
-          
-      </DashboardLayout>
+            </Box>
+        </DashboardLayout>
+      </>
     );
   }
 }
@@ -84,3 +108,14 @@ Dashboard.propTypes = {
 };
 
 export default withStyles(styles)(Dashboard);
+
+// styles={{
+                    //   blanket: base => ({
+                    //     ...base,
+                    //     backgroundColor: 'rgba(40,60,20,0.85)',
+                    //   }),
+                    //   dialog: base => ({
+                    //     ...base,
+                    //     maxWidth: 640,
+                    //   }),
+                    // }}>

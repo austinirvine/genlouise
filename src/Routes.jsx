@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 import Dashboard from './views/Dashboard';
-import Reviews from './views/Reviews/Reviews';
+import Home from './views/Home/index';
 
 export default class Routes extends Component {
   render() {
@@ -10,7 +10,7 @@ export default class Routes extends Component {
       <Switch>
         <Redirect exact from="/" to="/dashboard"/>
         <Route component={Dashboard} exact path="/dashboard"/>
-        <Route component={Reviews} exact path="/about"/>
+        <Route component={Home} exact path="/home"/>
       </Switch>
     );
   }

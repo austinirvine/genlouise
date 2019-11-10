@@ -12,7 +12,7 @@ export default theme => ({
   },
   toolbar: {
     minHeight: 'auto',
-    width: '100%'
+    width: '100%',
   },
   src: {
     height: '100%',
@@ -21,13 +21,7 @@ export default theme => ({
   title: {
     marginLeft: theme.spacing.unit,
     fontSize: '40px',
-    // position: 'relative',
-    // float: 'left',
-    // top: '50%',
-    // left: '50%',
-    // transform: 'translate(-50%, 0%)',
     color: '#fb6e6e',
-    // 'margin-left': '8px',
     'font-family': '-apple-system',
     'font-style': 'normal'
   },

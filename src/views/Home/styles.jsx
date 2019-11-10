@@ -2,6 +2,10 @@ export default theme => ({
   root: {
     padding: theme.spacing.unit * 3
   },
+  imageStyle: {
+    height: 'auto',
+    width: 'auto',
+  },
   content: {
     marginTop: theme.spacing.unit * 2
   },
