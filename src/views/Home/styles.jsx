@@ -2,6 +2,13 @@ export default theme => ({
   root: {
     padding: theme.spacing.unit * 3
   },
+  pdfDoc: {
+    width: '100% !important',
+    height: 'auto !important',
+  },
+  topGrid: {
+    background: 'linear-gradient(white, white, pink)',
+  },
   imageStyle: {
     height: 'auto',
     width: 'auto',

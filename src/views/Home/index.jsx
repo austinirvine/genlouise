@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Paper, Box, Grid, Typography, Button } from '@material-ui/core';
+import { Hidden, Paper, Box, Grid, Typography, Button } from '@material-ui/core';
 import { withStyles } from '@material-ui/core';
 import Image from 'material-ui-image';
 import { Dashboard as DashboardLayout } from '../../layouts';
@@ -9,7 +9,7 @@ import PdfView from './PdfView';
 
 import styles from './styles';
 
-class Channels extends Component {
+class Home extends Component {
   signal = true;
 
   state = {
@@ -31,7 +31,7 @@ class Channels extends Component {
     return (
       <DashboardLayout title="Genevieve Prescher">
         <Box p={5}>
-          <Paper>
+          <Paper className={classes.topGrid}>
             <Box>
               <Grid container spacing={3}>
                 <Grid item xs={2} sm={4}></Grid>
@@ -41,6 +41,7 @@ class Channels extends Component {
                       src={gen}
                       aspectRatio={(1)}
                       disableSpinner
+                      className={classes.imageStyle}
                     />
                   </Box>
                 </Grid>
@@ -58,8 +59,11 @@ class Channels extends Component {
                     </Paper>
                   </Box>
                 </Grid>
-                <Grid item xs={12} sm={12} align="center">
-                  <PdfView />
+                
+                <Grid item sm={12} align="center">
+                  <Hidden smDown>
+                    <PdfView />
+                  </Hidden>
                 </Grid>
                 <Grid item xs={12} sm={2}>
                   <Box p={3}>
@@ -81,9 +85,9 @@ class Channels extends Component {
   }
 }
 
-Channels.propTypes = {
+Home.propTypes = {
   /** Material UI Styling */
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(Channels);
+export default withStyles(styles)(Home);

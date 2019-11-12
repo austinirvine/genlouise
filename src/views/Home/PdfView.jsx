@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { Document, Page } from 'react-pdf/dist/entry.webpack';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
-import './Sample.less';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core';
 import pdfFile from './files/resume.pdf';
+
+import styles from './styles';
 
 const options = {
     cMapUrl: 'cmaps/',
@@ -27,33 +30,36 @@ class PdfView extends Component {
  
   render() {
     const { file, numPages } = this.state;
+    const { classes } = this.props;
 
     return (
-      <div className="Example">
-        <div className="Example__container">
-          <div className="Example__container__document">
-            <Document
-              file={pdfFile}
-              onLoadSuccess={this.onDocumentLoadSuccess}
-              options={options}
-            >
-              {
-                Array.from(
-                  new Array(numPages),
-                  (el, index) => (
-                    <Page
-                      key={`page_${index + 1}`}
-                      pageNumber={index + 1}
-                    />
-                  ),
-                )
-              }
-            </Document>
-          </div>
+        <div className={classes.pdfDoc}>
+          <Document
+            file={file}
+            onLoadSuccess={this.onDocumentLoadSuccess}
+            options={options}
+            
+          >
+            {
+              Array.from(
+                new Array(numPages),
+                (el, index) => (
+                  <Page
+                    key={`page_${index + 1}`}
+                    pageNumber={index + 1}
+                  />
+                ),
+              )
+            }
+          </Document>
         </div>
-      </div>
     );
   }
 }
 
-export default PdfView;
+PdfView.propTypes = {
+  /** Material UI Styling */
+  classes: PropTypes.object.isRequired
+};
+
+export default withStyles(styles)(PdfView);
