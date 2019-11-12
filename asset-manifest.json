@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.e12335ea.chunk.css",
-    "main.js": "/static/js/main.f122887c.chunk.js",
-    "main.js.map": "/static/js/main.f122887c.chunk.js.map",
+    "main.js": "/static/js/main.9a4cc3d9.chunk.js",
+    "main.js.map": "/static/js/main.9a4cc3d9.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.8cadd9f6.js",
     "runtime-main.js.map": "/static/js/runtime-main.8cadd9f6.js.map",
     "static/css/2.36e32d21.chunk.css": "/static/css/2.36e32d21.chunk.css",
-    "static/js/2.18bf6fa0.chunk.js": "/static/js/2.18bf6fa0.chunk.js",
-    "static/js/2.18bf6fa0.chunk.js.map": "/static/js/2.18bf6fa0.chunk.js.map",
+    "static/js/2.86d65a75.chunk.js": "/static/js/2.86d65a75.chunk.js",
+    "static/js/2.86d65a75.chunk.js.map": "/static/js/2.86d65a75.chunk.js.map",
     "d5af51308d2ebabb47a3.worker.js": "/d5af51308d2ebabb47a3.worker.js",
     "d5af51308d2ebabb47a3.worker.js.map": "/d5af51308d2ebabb47a3.worker.js.map",
     "index.html": "/index.html",
-    "precache-manifest.931b609b6d831a73089f8708fbc468fd.js": "/precache-manifest.931b609b6d831a73089f8708fbc468fd.js",
+    "precache-manifest.ac1c8cb62f4e63ad6d28321a16bfc91a.js": "/precache-manifest.ac1c8cb62f4e63ad6d28321a16bfc91a.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.36e32d21.chunk.css.map": "/static/css/2.36e32d21.chunk.css.map",
     "static/css/main.e12335ea.chunk.css.map": "/static/css/main.e12335ea.chunk.css.map",
@@ -25,22 +25,29 @@
     "static/media/IMG_5848.jpg": "/static/media/IMG_5848.d656c791.jpg",
     "static/media/Kod2copy.png": "/static/media/Kod2copy.e2310672.png",
     "static/media/RussianDoll.png": "/static/media/RussianDoll.5e485ab3.png",
-    "static/media/Sample.less": "/static/media/Sample.382434b4.less",
-    "static/media/bluegirl.png": "/static/media/bluegirl.49dabfb6.png",
+    "static/media/Zapata.png": "/static/media/Zapata.5520bc17.png",
+    "static/media/birdee.png": "/static/media/birdee.b78a3ef3.png",
+    "static/media/blakestairs.png": "/static/media/blakestairs.71d54856.png",
+    "static/media/bluegirl.png": "/static/media/bluegirl.240059d4.png",
     "static/media/clintonlakecopy.png": "/static/media/clintonlakecopy.0a7e221c.png",
+    "static/media/danrox.png": "/static/media/danrox.27d0d2d7.png",
     "static/media/decade copy.png": "/static/media/decade copy.9c82c82a.png",
-    "static/media/eldridge.png": "/static/media/eldridge.57a6be4e.png",
+    "static/media/eldridge.png": "/static/media/eldridge.ef19e961.png",
     "static/media/gavcopy.png": "/static/media/gavcopy.43f40c3b.png",
     "static/media/gen.png": "/static/media/gen.1fb12b8a.png",
     "static/media/lawrencesunset copy.png": "/static/media/lawrencesunset copy.e9ee595f.png",
     "static/media/lizardcopy.png": "/static/media/lizardcopy.fd33c62f.png",
-    "static/media/resume.pdf": "/static/media/resume.57d99f41.pdf"
+    "static/media/pumpkinpie.png": "/static/media/pumpkinpie.09323d35.png",
+    "static/media/resume.pdf": "/static/media/resume.57d99f41.pdf",
+    "static/media/sky.png": "/static/media/sky.3338c0a0.png",
+    "static/media/staringcontest.png": "/static/media/staringcontest.ee23d8a5.png",
+    "static/media/windturbinescopy.png": "/static/media/windturbinescopy.e40fe3e9.png"
   },
   "entrypoints": [
     "static/js/runtime-main.8cadd9f6.js",
     "static/css/2.36e32d21.chunk.css",
-    "static/js/2.18bf6fa0.chunk.js",
+    "static/js/2.86d65a75.chunk.js",
     "static/css/main.e12335ea.chunk.css",
-    "static/js/main.f122887c.chunk.js"
+    "static/js/main.9a4cc3d9.chunk.js"
   ]
 }
